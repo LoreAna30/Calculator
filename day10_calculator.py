@@ -22,14 +22,14 @@ operations = {"+": add,
 
 def calculator():
     print(calcul)
-    num1 = int(input("What is the first number? "))
+    num1 = float(input("What is the first number? "))
     for key in operations:
         print(key)
 
     calculator_run = True
     while calculator_run:
         operation_symbol = input("Pick an operation: ")
-        another_number = int(input("What is the next number? "))
+        another_number = float(input("What is the next number? "))
         calculation_function = operations[operation_symbol]
         result = calculation_function(num1, another_number)
         print(f"{num1} {operation_symbol} {another_number} = {result}")
